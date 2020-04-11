@@ -28,10 +28,13 @@ I am using Raspberry Pi 4 with KDB0605HB blower fan - whitch is a part of an Asu
 300Hz was quite appropriate as PWM output frequency for this cooler, but if you have another type ([for example this one](https://www.amazon.com/Noctua-NF-A4x20-5V-PWM-Premium-Quality/dp/B071FNHVXN)), this can be different.
 
 ### References:
-[How to use soft PWM in RPi.GPIO 0.5.2a pt 2 – led dimming and motor speed control](https://raspi.tv/2013/how-to-use-soft-pwm-in-rpi-gpio-pt-2-led-dimming-and-motor-speed-control)
-[Raspberry Pi: PWM in GPIO (Python)](https://www.radishlogic.com/raspberry-pi/raspberry-pi-pwm-gpio/)
-[RPi.GPIO basics 4 – Setting up RPi.GPIO, numbering systems and inputs](https://raspi.tv/2013/rpi-gpio-basics-4-setting-up-rpi-gpio-numbering-systems-and-inputs)
-[class gpiozero.CPUTemperature](https://gpiozero.readthedocs.io/en/stable/api_internal.html#gpiozero.CPUTemperature)
++ [How to use soft PWM in RPi.GPIO 0.5.2a pt 2 – led dimming and motor speed control](https://raspi.tv/2013/how-to-use-soft-pwm-in-rpi-gpio-pt-2-led-dimming-and-motor-speed-control)
++ [Raspberry Pi: PWM in GPIO (Python)](https://www.radishlogic.com/raspberry-pi/raspberry-pi-pwm-gpio/)
++ [RPi.GPIO basics 4 – Setting up RPi.GPIO, numbering systems and inputs](https://raspi.tv/2013/rpi-gpio-basics-4-setting-up-rpi-gpio-numbering-systems-and-inputs)
++ [class gpiozero.CPUTemperature](https://gpiozero.readthedocs.io/en/stable/api_internal.html#gpiozero.CPUTemperature)
+
+#### Test result:
+Temperature in idle mode fluctuated between 41-43 Celsius, therefore PWM.ChangeDutyCycle() got 20% in those loops.
 
 ##### P. S.
 This is my first uploaded project, so execuse me if experience any deficiency on my commit...
