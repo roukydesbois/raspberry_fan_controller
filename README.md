@@ -15,7 +15,7 @@ I assume you connected to Pi via SSH before (Ubuntu server has it and started it
      - pip: 
      `$ pip install RPi.GPIO gpiozero`
      - or apt: 
-     `sudo apt-get install python3-rpi.gpio python3-gpiozero`
+     `$ sudo apt-get install python3-rpi.gpio python3-gpiozero`
   2. Copy fancontroller.py to user directory (in my case /home/ubuntu)
   3. Create cron job:
      - open crontab:
