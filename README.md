@@ -12,8 +12,9 @@ Tested with a KDB0605HB laptop cooler on a Raspbery Pi 4, Ubuntu server 19.10 64
 ### How to use:
 I assume you connected to Pi via SSH before (Ubuntu server has it and started it by default). [ReferenceLink](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu)
   1. Download packages with pip or apt
+     - pip: 
      `$ pip install RPi.GPIO gpiozero`
-     - or
+     - or apt: 
      `sudo apt-get install python3-rpi.gpio python3-gpiozero`
   2. Copy fancontroller.py to user directory (in my case /home/ubuntu)
   3. Create cron job:
