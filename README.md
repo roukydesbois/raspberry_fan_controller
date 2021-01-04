@@ -1,7 +1,7 @@
 # Raspberry fan controller
 Simple python script for control speed of a pwm cooling fan.
 
-Tested with a KDB0605HB laptop cooler on a Raspbery Pi 4, Ubuntu server 19.10.
+Tested with a KDB0605HB laptop cooler on a Raspbery Pi 4, Ubuntu server 19.10 64bit, 20.04 64bit; Raspberry Pi OS
 
 ### Dependencies:
 
@@ -11,8 +11,10 @@ Tested with a KDB0605HB laptop cooler on a Raspbery Pi 4, Ubuntu server 19.10.
 
 ### How to use:
 I assume you connected to Pi via SSH before (Ubuntu server has it and started it by default). [ReferenceLink](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu)
-  1. Download packages with pip
+  1. Download packages with pip or apt
      `$ pip install RPi.GPIO gpiozero`
+     - or
+     `sudo apt-get install python3-rpi.gpio python3-gpiozero`
   2. Copy fancontroller.py to user directory (in my case /home/ubuntu)
   3. Create cron job:
      - open crontab:
@@ -34,7 +36,8 @@ I am using Raspberry Pi 4 with KDB0605HB blower fan - whitch is a part of an Asu
 + [class gpiozero.CPUTemperature](https://gpiozero.readthedocs.io/en/stable/api_internal.html#gpiozero.CPUTemperature)
 
 #### Test result:
-Temperature in idle mode fluctuated between 41-43 Celsius, therefore PWM.ChangeDutyCycle() got 20% in those loops.
+Temperature in idle mode fluctuated between 41-43 Celsius under Ubuntu 19.10, therefore PWM.ChangeDutyCycle() got 20% in those loops.
+Note that Ubuntu server for RPi consumes much resource and heating CPU compared to Raspbery OS.
 
 ##### P. S.
 This is my first uploaded project, so execuse me if experience any deficiency on my commit...
