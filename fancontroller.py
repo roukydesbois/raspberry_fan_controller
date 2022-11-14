@@ -33,14 +33,14 @@ def run(newRound):
                 pwm.ChangeDutyCycle(100)
             elif temp > 65:
                 pwm.ChangeDutyCycle(80)
-            elif temp > 55:
-                pwm.ChangeDutyCycle(70)
-            elif temp > 50:
-                pwm.ChangeDutyCycle(50)
-            elif temp > 45:
-                pwm.ChangeDutyCycle(30)
+#            elif temp > 55:
+#                pwm.ChangeDutyCycle(70)
+#            elif temp > 50:
+#                pwm.ChangeDutyCycle(50)
+#            elif temp > 45:
+#                pwm.ChangeDutyCycle(30)
             else:
-                pwm12.ChangeDutyCycle(0)
+                pwm.ChangeDutyCycle(0)
     except Exception as e:
         newRound.set()
         insertdebug(e)
