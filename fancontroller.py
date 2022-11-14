@@ -40,7 +40,7 @@ def run(newRound):
 #            elif temp > 45:
 #                pwm.ChangeDutyCycle(30)
             else:
-                pwm12.ChangeDutyCycle(0)
+                pwm.ChangeDutyCycle(0)
     except Exception as e:
         newRound.set()
         insertdebug(e)
